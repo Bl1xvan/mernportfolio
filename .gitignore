@@ -1,6 +1,4 @@
-/server/node_modules
-/client/node_modules
-/client/build
-/server/.env
+node_modules
+.env
 .idea/
 .vscode/
