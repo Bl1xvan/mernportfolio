@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react"
 import './App.css';
+import Empty from "./Empty"
 
 function App() {
   const [backendData, setBackendData] = useState([{}])
@@ -19,19 +20,10 @@ function App() {
         <Empty emptyClass={"loading"} message={"Loading"}/>
       ) : (backendData.total === 0) ? ( <Empty emptyClass={"notfound"} message={"No Results"} /> ) : (
         backendData.projects.map((project) => {
-          const {title, repository, description, _id, deployment, image, languages} = project;
-          return (
-                  <OneProject 
-                      key={_id} 
-                      title={title} 
-                      repo={repository} 
-                      desc={description} 
-                      depl={deployment}
-                      img={image}
-                      lang={languages}
-                      />         
+          const {title,languages} = project;
+          return (<div>{title} {languages}</div>        
                   )
-      })
+              })
       )}
       <a id="totop" href="#toppoint">^</a>
     </div>
