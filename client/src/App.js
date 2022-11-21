@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import {useEffect, useState} from "react"
 import './App.css';
 
 function App() {
+  const [backendData, setBackendData] = useState([{}])
+  const [page, setPage] = useState(1)
+  const [langValue, setLangValue] = useState("JS")
+  const [title, setTitle] = useState("Vowel-Counter")
+  useEffect(() => {
+    fetch(`/api/v1/projects?p=${page}&languages=${langValue}&title=${title}`).then(
+      response => response.json()
+    ).then(
+      data => setBackendData(data)
+    )
+  }, [page, langValue, title])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="allprojects">
+      {(typeof backendData.projects === 'undefined') ? (
+        <Empty emptyClass={"loading"} message={"Loading"}/>
+      ) : (backendData.total === 0) ? ( <Empty emptyClass={"notfound"} message={"No Results"} /> ) : (
+        backendData.projects.map((project) => {
+          const {title, repository, description, _id, deployment, image, languages} = project;
+          return (
+                  <OneProject 
+                      key={_id} 
+                      title={title} 
+                      repo={repository} 
+                      desc={description} 
+                      depl={deployment}
+                      img={image}
+                      lang={languages}
+                      />         
+                  )
+      })
+      )}
+      <a id="totop" href="#toppoint">^</a>
     </div>
   );
 }
