@@ -13,6 +13,7 @@ app.use('/', express.static('./public'));
 
 app.use(express.json())
 app.use('/api/v1/projects', projects)
+app.use('/api', authRoutes);
 
 app.use(notFound)
 app.use(errorHandlerMiddleware)
