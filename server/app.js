@@ -1,15 +1,13 @@
 require('dotenv').config();
 const express = require('express');
-const authRoutes = require('./routes/auth-routes');
 const app = express();
-const cors = require("cors");
+const authRoutes = require('./routes/auth-routes');
 const projects = require('./routes/projects');
 const connectDB = require('./db/connect');
 const { join } = require("path");
 const notFound = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 
-app.use(cors)
 app.use('/', express.static('./public'));
 
 app.use(express.json())
