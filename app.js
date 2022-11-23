@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser')
 const projects = require('./routes/projects');
 const connectDB = require('./db/connect');
 require('dotenv').config();
@@ -10,9 +9,7 @@ const errorHandlerMiddleware = require('./middleware/error-handler');
 
 
 app.use('/', express.static('./public'));
-
 app.use(express.json())
-app.use(bodyParser.json())
 app.use('/api/v1/projects', projects)
 app.use('/', express.static(join(__dirname, 'client', 'build')));
 
