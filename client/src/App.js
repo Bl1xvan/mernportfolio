@@ -5,8 +5,8 @@ import Empty from "./Empty"
 function App() {
   const [backendData, setBackendData] = useState([{}])
   const [page, setPage] = useState(1)
-  const [langValue, setLangValue] = useState("JS")
-  const [title, setTitle] = useState("Vowel-Counter")
+  const [langValue, setLangValue] = useState("")
+  const [title, setTitle] = useState("")
   useEffect(() => {
     fetch(`/api/v1/projects?p=${page}&languages=${langValue}&title=${title}`).then(
       response => response.json()
