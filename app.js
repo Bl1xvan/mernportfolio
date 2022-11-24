@@ -1,8 +1,7 @@
 require('dotenv').config();
 const express = require('express');
-const cors = require('cors');
-const morgan = require('morgan');
-const app = express();
+
+
 
 const projects = require('./routes/projects');
 const connectDB = require('./db/connect');
@@ -10,11 +9,10 @@ const { join } = require("path");
 const notFound = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 
+const app = express();
 app.use('/', express.static('./public'));
 
 app.use(express.json())
-app.use(morgan('dev'))
-app.use(cors({origin: true, credentials: true}))
 app.use('/api/v1/projects', projects)
 
 
@@ -27,7 +25,7 @@ const port = process.env.PORT || 5000;
 
 if (process.env.NODE_ENV === 'production') {
     //*Set static folder
-    app.use(express.static('client/build'));
+    app.use('/', express.static(join(__dirname, 'client', 'build')));
     
     app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'client', 'build','index.html')));
   }
