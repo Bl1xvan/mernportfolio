@@ -8,7 +8,7 @@ function App() {
   const [langValue, setLangValue] = useState("")
   const [title, setTitle] = useState("")
   useEffect(() => {
-    fetch(`/api/v1/projects?p=${page}&languages=${langValue}&title=${title}`).then(
+    fetch(`/api/v1/projects?p=${page}&language=${langValue}&title=${title}`).then(
       response => response.json()
     ).then(
       data => setBackendData(data)
