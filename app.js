@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const app = express();
-const authRoutes = require('./routes/auth-routes');
+
 const projects = require('./routes/projects');
 const connectDB = require('./db/connect');
 const { join } = require("path");
@@ -16,7 +16,7 @@ app.use(express.json())
 app.use(morgan('dev'))
 app.use(cors({origin: true, credentials: true}))
 app.use('/api/v1/projects', projects)
-app.use('/api', authRoutes);
+
 
 app.use(notFound)
 app.use(errorHandlerMiddleware)
