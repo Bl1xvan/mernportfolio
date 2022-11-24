@@ -1,10 +1,6 @@
 const Project = require('../models/Project')
 const asyncWrapper = require('../middleware/async')
 
-const getAllProjectsStatic = async (req, res) => {
-    const projects = await Project.find()
-    res.status(200).json({projects});
-  };
 
 const getAllProjects = asyncWrapper(async (req, res) => {
    
@@ -46,5 +42,4 @@ const getAllProjects = asyncWrapper(async (req, res) => {
 
 module.exports = {
     getAllProjects,
-    getAllProjectsStatic
 }
