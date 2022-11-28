@@ -1,10 +1,11 @@
 import './App.css';
-import useData  from './hooks/useData'
+import useData from './hooks/useData'
 function App() {
-  const {backendData} = useData()
+  const hookData = useData()
+  
   return (
       <div>
-      <h1>{backendData}</h1>
+      <p>{hookData.total}</p>
       <a id="totop" href="#toppoint">^</a>
       </div>
   );

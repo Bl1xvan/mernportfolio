@@ -17,7 +17,6 @@ function useData() {
     }, [page, languages, title])
 
 
-
     return backendData
 
 }
