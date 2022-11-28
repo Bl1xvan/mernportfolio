@@ -1,5 +1,5 @@
 import './App.css';
-import {useData} from './hooks/useData'
+import useData from './hooks/useData'
 function App() {
   const {pageCount} = useData()
   return (
