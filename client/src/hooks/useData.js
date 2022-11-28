@@ -16,10 +16,10 @@ function useData() {
       )
     }, [page, languages, title])
 
-    const [nextPage] = useState(backendData.next)
-    const [pageCount] = useState(backendData.pageCount)
-    const [projectCount] = useState(backendData.total)
-    const [projects] = useState(backendData.projects)
+    const [nextPage, setNextPage] = useState(backendData.next)
+    const [pageCount, setPageCount] = useState(backendData.pageCount)
+    const [projectCount, setProjectCount] = useState(backendData.total)
+    const [projects, setProjects] = useState(backendData.projects)
 
     return {nextPage, pageCount, projectCount, projects}
 
