@@ -4,7 +4,7 @@ function App() {
   const {backendData} = useData()
   return (
       <div>
-      <h1>{backendData.total}</h1>
+      <h1>{backendData}</h1>
       <a id="totop" href="#toppoint">^</a>
       </div>
   );
