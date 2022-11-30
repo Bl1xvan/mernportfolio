@@ -1,6 +1,6 @@
 import React from 'react'
 import Thumbnail from "./Thumbnail"
-import Overlay from "./Overlay"
+import Overlay from "../Overlay"
 import {v4} from 'uuid'
 
 export default function OneProject({project}) {

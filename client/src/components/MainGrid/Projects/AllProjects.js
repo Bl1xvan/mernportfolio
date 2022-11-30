@@ -1,7 +1,7 @@
 import React from 'react'
 import OneProject from './OneProject'
-import Empty from "./Empty"
-import useData from '../../hooks/useData'
+import Empty from "../Empty"
+import useData from '../../../hooks/useData'
 
 export default function AllProjects() {
 

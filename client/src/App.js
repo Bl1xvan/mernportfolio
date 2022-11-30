@@ -1,4 +1,5 @@
 import './App.css';
+import './Colors'
 import MainGrid from './components/MainGrid/MainGrid'
 
 function App() {

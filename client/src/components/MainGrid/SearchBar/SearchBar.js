@@ -1,5 +1,5 @@
 import React from 'react'
-import { actions } from "../../store/index";
+import { actions } from "../../../store/index";
 import { useDispatch } from "react-redux";
 
 export default function SearchBar(){

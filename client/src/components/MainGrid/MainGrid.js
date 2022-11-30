@@ -1,6 +1,6 @@
 import React from 'react'
-import AllProjects from './AllProjects'
-import Pagination from './Pagination'
+import AllProjects from './Projects/AllProjects'
+import Pagination from './Pagination/Pagination'
 import PgBtnPair from './PgBtnPair'
 import ToggleDiv from './ToggleDiv'
 import { useSelector } from "react-redux";
