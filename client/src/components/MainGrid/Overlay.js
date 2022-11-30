@@ -5,7 +5,7 @@ import {v4} from 'uuid'
 export default function Overlay({project}) {
     const {img, title, repo, depl, desc, languages} = project
     return (
-        <div className="overlay">
+        <div className="overlay" style={{display: "none"}}>
           <div className="fullinfo">
           <div className="hidediv">
                 <button type="button" className="hidedetails" >X</button>

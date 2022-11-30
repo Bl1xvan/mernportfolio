@@ -7,9 +7,10 @@ import { useSelector } from "react-redux";
   const {pageCount} = useData()
   let pages = []
 
-  for(let i = 1; i <= Math.ceil({pageCount}); i++){
+  for(let i = 1; i <= Math.ceil(pageCount); i++){
      pages.push(i)
   }
+
   return (
     <div className="pgcont">
     <button type="button" className="showside">Show Filters</button>
