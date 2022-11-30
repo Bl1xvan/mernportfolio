@@ -1,11 +1,26 @@
 import React from 'react'
+import AllProjects from './AllProjects'
+import Pagination from './Pagination'
+import PgBtnPair from './PgBtnPair'
+import ToggleDiv from './ToggleDiv'
+import { useSelector } from "react-redux";
 
-const MainGrid = ({project}) => {
-  const {title, languages} = project
+const MainGrid = () => {
+  const title = useSelector((state) => state.title);
+  const languages = useSelector((state) => state.languages);
   return (
-    <div>
-      <h3>{title}</h3>
-      <p>{languages}</p>
+    <div id="projectsdiv">
+      <ToggleDiv />
+      <div className="maingrid">
+      <div className="middlecont">
+      <div className="port-hdr"><h2 id="toppoint">Projects</h2>
+      </div>
+      <div><pre>{title && `Name: ${title} |`} {languages && `Contains languages: ${languages.replace(/&/g, ", ")}`}</pre></div>
+      <Pagination />
+      <AllProjects />
+      <PgBtnPair  /> 
+      </div>
+      </div>
     </div>
   )
 }
