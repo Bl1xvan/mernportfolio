@@ -1,9 +1,8 @@
 import React from 'react'
-import useData from '../../hooks/useData'
 
-export default function Thumbnail() {
+export default function Thumbnail({project}) {
 
-const {title, depl} = useData()
+const {title, depl} = project
   return (
     <div className="main-cont">
     <a href={depl} className="thumbnail-link">
