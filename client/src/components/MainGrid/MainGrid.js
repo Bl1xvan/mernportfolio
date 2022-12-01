@@ -1,11 +1,14 @@
 import React from 'react'
 import AllProjects from './Projects/AllProjects'
 import Pagination from './Pagination/Pagination'
-import PgBtnPair from './PgBtnPair'
-import ToggleDiv from './ToggleDiv'
+import PgBtnPair from './Pagination/PgBtnPair'
+import ToggleDiv from './Projects/ToggleDiv'
 import { useSelector } from "react-redux";
 
 const MainGrid = () => {
+
+  
+
   const title = useSelector((state) => state.title);
   const languages = useSelector((state) => state.languages);
   return (

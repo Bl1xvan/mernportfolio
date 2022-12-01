@@ -1,8 +1,8 @@
 import React from 'react'
-import useData from '../../hooks/useData'
+import useData from '../../../hooks/useData'
 import {IoMdArrowDropleft, IoMdArrowDropright} from "react-icons/io";
 import { useSelector } from "react-redux";
-import { actions } from "../../store/index";
+import { actions } from "../../../store/index";
 import { useDispatch } from "react-redux";
 
 export default function PgBtnPair() {

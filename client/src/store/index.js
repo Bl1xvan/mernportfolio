@@ -30,6 +30,9 @@ const apiSlice = createSlice({
       if (state.page !== action.payload.limit) {
         state.page += action.payload.difference;
       }
+    },
+    handlePageJump(state, action){
+      state.page = Number(action.payload)
     }
   }
 });

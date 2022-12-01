@@ -2,6 +2,7 @@ import React from 'react'
 import OneProject from './OneProject'
 import Empty from "../Empty"
 import useData from '../../../hooks/useData'
+import {v4} from "uuid"
 
 export default function AllProjects() {
 
@@ -13,7 +14,7 @@ export default function AllProjects() {
       ) : (total === 0) ? ( <Empty emptyClass={"notfound"} message={"No Results"} /> ) : (
           projects.map((project) => {
           return (
-                  <OneProject project={project} />         
+                  <OneProject project={project} key={v4()} />         
                   )
       })
       )}

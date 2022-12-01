@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Thumbnail({project}) {
+export default function Thumbnail({project, displayBlock}) {
 
 const {title, depl} = project
   return (
@@ -8,10 +8,10 @@ const {title, depl} = project
     <a href={depl} className="thumbnail-link">
       <h2 className="thumbnail-name">{title}</h2>
       <span className="smloverlay"><h4>Go To Site</h4></span>
-     </a>
+    </a>
   
     <div className="button-cont">
-      <button type="button" className="showdetails">Details</button>
+      <button type="button" className="showdetails" onClick={displayBlock}>Details</button>
     </div>
   </div>
   )
