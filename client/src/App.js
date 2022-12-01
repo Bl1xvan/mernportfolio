@@ -3,6 +3,7 @@ import './Colors.css'
 import MainGrid from './components/MainGrid/MainGrid'
 import Welcome from './components/Welcome/Welcome'
 import Navigation from './components/Navigation/Navigation'
+import Contact from './components/Contact/Contact'
 
 function App() {
  
@@ -11,6 +12,7 @@ function App() {
       <Navigation />
       <Welcome />
       <MainGrid />
+      <Contact />
     </div>
   );
 }
