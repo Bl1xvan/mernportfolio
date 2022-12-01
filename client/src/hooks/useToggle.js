@@ -1,16 +1,20 @@
-import {useState, useCallback} from 'react'
+import {useState} from 'react'
 
 export default function useToggle() {
-    const [toggle, setToggle] = useState(false)
-    
-    const showToggle = useCallback(() =>{
-        setToggle(true)
-    }, [])
-    const hideToggle = useCallback(() => {
-        setToggle(false)
-    }, [])
+    const [toggle, setToggle] = useState('yellow')
+    const showToggle = () => {
+        const toggleDiv = document.querySelector('.togglediv')
+        setToggle('pink')
+        toggleDiv.style.backgroundColor = toggle
+    }
 
-    return {toggle, showToggle, hideToggle}
+    const hideToggle = () => {
+        const toggleDiv = document.querySelector('.togglediv')
+        setToggle('yellow')
+        toggleDiv.style.backgroundColor = toggle
+    }
+
+    return {showToggle, hideToggle}
 }
 
 
