@@ -8,7 +8,7 @@ export default function ToggleDiv() {
   const {hideToggle} = useToggle()
   
   return (
-    <div style={{backgroundColor: 'yellow'}} className="togglediv">
+    <div className="togglediv">
     <div className="filter-controls">
       <SearchBar />
       <Tags />

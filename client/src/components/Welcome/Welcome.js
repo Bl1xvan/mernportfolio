@@ -2,18 +2,12 @@ import React from 'react'
 
 const Welcome = () => {
   return (
-    <div className="welcome" id="welcomediv">
-    <div className="header">
+    <div className="portfolio-section" id="welcomediv">
+    <div>
       <h1>
-          <span className="ltr">W</span>
-          <span className="ltr">E</span>
-          <span className="ltr">L</span>
-          <span className="ltr">C</span>
-          <span className="ltr">O</span>
-          <span className="ltr">M</span>
-          <span className="ltr">E</span>
+          WELCOME
       </h1>
-      <div className="subheader">
+      <div>
         <h4>Front-End Developer</h4>
         <a href="#projectsdiv">Go to projects</a>
       </div>

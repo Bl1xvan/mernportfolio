@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#maindiv{
+    width: 100vw;
+    max-width: 1350px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.portfolio-section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin: 0 auto;
+}
+
+.portfolio-section:not(#welcomediv) > *{
+    width: 90%;
+}
+
+.grid-group{
+   display: grid;
+   gap: 1.5em;
+   margin: 15px 0;
+}
+
+.not-projects{
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+}
+
+.half-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    background-color: aqua;
+}
+
+.rounded{
+    background-color: rgb(208, 208, 208);
+    border-radius: 10px;
+}
+
+.centered{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: gray;
+    aspect-ratio: 1;
+}
+
+.auto-height{
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-content: center;
+    aspect-ratio: 1;
+    background-color: gray;
+}
+
+.bothends{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 1250px){
+    .projects{
+        grid-template-columns: repeat(4, 1fr)
+    }
+}
+
+@media screen and (max-width: 1249px) and (min-width: 600px){
+    .projects{
+        grid-template-columns: repeat(2, 300px);
+        justify-content: center;
+    }
+}

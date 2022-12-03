@@ -21,7 +21,7 @@ import useToggle from "../../../hooks/useToggle"
   }
 
   return (
-    <div className="pgcont">
+    <div className="bothends">
     <button type="button" className="showside" onClick={showToggle}>Show Filters</button>
     <div className="pglabel">
     <h3>Page Number</h3>

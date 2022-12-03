@@ -10,10 +10,10 @@ export default function PgBtnPair() {
   const page = useSelector((state) => state.page);
   const dispatch = useDispatch()
   return (
-    <div className="pgbtnpair">
+    <div className="bothends">
     <button 
       type="button"
-      className="pgbtn"
+      className="centered"
       onClick={() =>
         dispatch(actions.handlePage({ limit: 1, difference: -1 }))
       }
@@ -22,7 +22,7 @@ export default function PgBtnPair() {
 
     <button 
       type="button"
-      className="pgbtn" 
+      className="centered" 
       onClick={() =>
         dispatch(actions.handlePage({ limit:{pageCount}, difference: 1 }))
       }

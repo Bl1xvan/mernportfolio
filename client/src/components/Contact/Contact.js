@@ -20,7 +20,7 @@ export default function Contact(){
   return (
     <div id="contactdiv">
       <h1 id="contact-header">Send a Message!</h1>
-      <div id="formdiv">
+      <div className="half-div">
         <div id="calltoaction">
           <p>My main offer is for freelance projects, but please let me know if you have other type of projects in mind!</p>
           <div>

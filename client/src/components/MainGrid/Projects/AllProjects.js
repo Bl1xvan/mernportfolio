@@ -8,7 +8,8 @@ export default function AllProjects() {
 
   const {projects, total} = useData()
   return (
-    <div className="allprojects">
+    <>
+    <div className="grid-group projects">
       {(typeof projects === 'undefined') ? (
         <Empty emptyClass={"loading"} message={"Loading"}/>
       ) : (total === 0) ? ( <Empty emptyClass={"notfound"} message={"No Results"} /> ) : (
@@ -18,8 +19,10 @@ export default function AllProjects() {
                   )
       })
       )}
-      <a id="totop" href="#toppoint">^</a>
+      
     </div>
+    <a id="totop" href="#toppoint">^</a>
+    </>
   )
 }
 
