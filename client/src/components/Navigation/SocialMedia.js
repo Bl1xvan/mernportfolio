@@ -4,11 +4,11 @@ import { FaGithub, FaEnvelope, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 
 const SocialMedia = () => {
   return (
-    <IconContext.Provider value={{color: "white", size: "1em" }}>
-      <a href="https://github.com/Bl1xvan"><FaGithub /></a>
-      <a href="mailto:cflaviendev@gmail.com"><FaEnvelope /></a>
-      <a href="https://www.linkedin.com/in/christeen-flavien1/"><FaLinkedinIn /></a>
-      <a href="twitter.com/Delila83803959"><FaTwitter /></a>
+    <IconContext.Provider value={{color: "white"}}>
+      <a className="rounded centered" href="https://github.com/Bl1xvan"><FaGithub /></a>
+      <a className="rounded centered" href="mailto:cflaviendev@gmail.com"><FaEnvelope /></a>
+      <a className="rounded centered" href="https://www.linkedin.com/in/christeen-flavien1/"><FaLinkedinIn /></a>
+      <a className="rounded centered" href="twitter.com/Delila83803959"><FaTwitter /></a>
    </IconContext.Provider>
   )
 }

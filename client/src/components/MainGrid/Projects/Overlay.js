@@ -4,7 +4,7 @@ import Languages from '../LangTabs/Languages'
 export default function Overlay({project, displayChange, displayNone}) {
     const {img, title, repo, depl, desc, languages} = project
     return (
-        <div className="overlay" style={displayChange}>
+        <div style={displayChange}>
           <div className="fullinfo">
           <div className="hidediv">
                 <button type="button" className="hidedetails" onClick={displayNone}>X</button>

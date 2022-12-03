@@ -7,14 +7,14 @@ export default function About(){
     <div className="portfolio-section" id="aboutdiv">
       <div id="services">
         <h3>Services</h3>
-        <div className="grid-group rounded not-projects">
+        <div className="grid-group rounded small-grid">
           <div>Portfolios</div>
           <div>Phone Apps</div>
         </div>
       </div>
       <div id="languages">
         <h3>Languages</h3>
-        <div className="grid-group rounded not-projects">
+        <div className="grid-group rounded small-grid">
           <div className="rounded centered"><SiHtml5 />HTML</div>
           <div className="rounded centered"><SiCss3 />CSS</div>
           <div className="rounded centered"><SiJavascript />JS</div>

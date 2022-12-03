@@ -9,7 +9,7 @@ export default function AllProjects() {
   const {projects, total} = useData()
   return (
     <>
-    <div className="grid-group projects">
+    <div className="rounded grid-group projects">
       {(typeof projects === 'undefined') ? (
         <Empty emptyClass={"loading"} message={"Loading"}/>
       ) : (total === 0) ? ( <Empty emptyClass={"notfound"} message={"No Results"} /> ) : (

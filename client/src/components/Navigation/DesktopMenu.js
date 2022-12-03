@@ -1,10 +1,9 @@
 import React from 'react'
-import SocialMedia from './SocialMedia'
 
 export default function DesktopMenu() {
   return (
-    <div className="D-navbar">
-    <span className="desktop-icons"><SocialMedia /></span>
+    <div className="bothends">
+    <span>Portfolio</span>
     <span className="D-navbargrid">
         <a href="#welcomediv">
           Welcome

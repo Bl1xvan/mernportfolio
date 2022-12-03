@@ -4,6 +4,23 @@
     padding: 0;
 }
 
+.button:not(.showdetails){
+    border-radius: 10px;
+}
+
+input, button, textarea{
+    border: none;
+    padding: 10px 5px;
+    background-color: gray;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+button:hover, a:hover, input[type="submit"]:hover{
+    filter: brightness(70%);
+}
+
+
 #maindiv{
     width: 100vw;
     max-width: 1350px;
@@ -29,22 +46,34 @@
 .grid-group{
    display: grid;
    gap: 1.5em;
-   margin: 15px 0;
 }
 
-.not-projects{
+.tiny-grid{
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); 
+    gap: .5em;
+}
+
+.small-grid{
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
 }
 
-.half-div{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    background-color: aqua;
+.medium-grid{
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
-.rounded{
-    background-color: rgb(208, 208, 208);
+.label-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.large-grid{
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.rounded:not(.auto-height){
     border-radius: 10px;
+    padding: 15px;
+    background-color: rgb(197, 197, 197);
 }
 
 .centered{
@@ -53,16 +82,25 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
-    background-color: gray;
     aspect-ratio: 1;
 }
 
+.rounded.centered{
+    background-color: gray;
+}
+
 .auto-height{
+    background-color: gray;
+    border-radius: 10px;
     display: grid;
     grid-template-rows: 1fr auto;
     align-content: center;
     aspect-ratio: 1;
-    background-color: gray;
+}
+
+.auto-height > *{
+    border-radius: 0 0 10px 10px;
+    margin: 0;
 }
 
 .bothends{
@@ -70,6 +108,25 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.overlay-container{
+    position: relative;
+}
+
+.overlay{
+   position:absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%; 
+}
+
+.overlay * {
+    z-index: 2;
+    opacity: 1;
+}
+
+
 
 @media screen and (min-width: 1250px){
     .projects{
