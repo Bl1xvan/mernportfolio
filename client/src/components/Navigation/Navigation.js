@@ -10,7 +10,7 @@ export default function Navigation(){
   
   return (
     <>
-      {width < 650 ? <MobileMenu /> : <DesktopMenu /> }
+      {width < 900 ? <MobileMenu /> : <DesktopMenu /> }
     </>
   )
 }

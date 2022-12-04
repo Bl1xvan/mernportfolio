@@ -3,19 +3,17 @@ import { FiMenu } from "react-icons/fi";
 
 export default function MobileMenu(){
   const [toggle, setToggle] = useState(false);
-  const styles = { position: "relative", top: toggle ? 0 : -500 }
+  const styles = {position: "relative", top: toggle ? 0 : -500 }
 
   const toggleDisplay = () =>{
     setToggle(!toggle)
   }
   return (
-    <div className="M-navbar">
-    <div className="menu">
+    <div className="fixed">
       <button type="button" className="togglebtn" onClick={toggleDisplay}>
         <FiMenu />
       </button>
-    </div>
-    <span className="M-navbargrid" style={styles}>
+    <span className="mobilenav" style={styles}>
         <a href="#welcomediv">
           Welcome
         </a>

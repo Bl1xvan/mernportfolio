@@ -11,8 +11,8 @@ export default function AllProjects() {
     <>
     <div className="rounded grid-group projects">
       {(typeof projects === 'undefined') ? (
-        <Empty emptyClass={"loading"} message={"Loading"}/>
-      ) : (total === 0) ? ( <Empty emptyClass={"notfound"} message={"No Results"} /> ) : (
+        <Empty message={"Loading..."}/>
+      ) : (total === 0) ? ( <Empty message={"No Results..."} /> ) : (
           projects.map((project) => {
           return (
                   <OneProject project={project} key={v4()} />         

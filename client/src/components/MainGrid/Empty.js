@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Empty = ({emptyClass, message}) => {
+const Empty = ({message}) => {
   return (
     <>
-    <div className={emptyClass}>{message}</div>
-    <div className="main-cont" style={{visibility: "hidden"}}>
-    </div>
+      <div className="rounded centered">{message}</div>
+      <div className="rounded centered">{message}</div>
+      <div className="rounded centered">{message}</div>
+      <div className="rounded centered">{message}</div>
     </>
   )
 }
