@@ -1,7 +1,30 @@
 *{
     box-sizing: border-box;
+    font-size: 1.15rem;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
     margin: 0;
-    padding: 0;
+}
+
+h1, h2, h3{
+    margin: 25px 0;
+}
+
+select{
+    height: 30px;
+    margin: auto 0;
+}
+
+p{
+    line-height: 2.5em;
+    margin-bottom: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 .button:not(.showdetails){
@@ -10,20 +33,36 @@
 
 input, button, textarea{
     border: none;
-    padding: 10px 5px;
+    padding: 15px;
     background-color: gray;
     border-radius: 5px;
     margin: 15px 0;
 }
 
-button:hover, a:hover, input[type="submit"]:hover{
+textarea{
+    min-height: 150px;
+}
+
+button:hover, a:not(.overlay-container):hover, input[type="submit"]:hover{
     filter: brightness(70%);
+}
+
+.desktopnav{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    gap: .2em;
+    text-align: center;
+}
+
+.desktopnav a {
+    background-color:rgb(122, 122, 122);
+    padding: 10px 0;
 }
 
 
 #maindiv{
     width: 100vw;
-    max-width: 1350px;
+    max-width: 1450px;
     min-height: 100vh;
     margin: 0 auto;
 }
@@ -40,7 +79,7 @@ button:hover, a:hover, input[type="submit"]:hover{
 }
 
 .portfolio-section:not(#welcomediv) > *{
-    width: 90%;
+    width: 95%;
 }
 
 .grid-group{
@@ -58,7 +97,7 @@ button:hover, a:hover, input[type="submit"]:hover{
 }
 
 .medium-grid{
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .label-flex{
@@ -66,14 +105,21 @@ button:hover, a:hover, input[type="submit"]:hover{
     flex-direction: column;
 }
 
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
 .large-grid{
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
 .rounded:not(.auto-height){
     border-radius: 10px;
     padding: 15px;
     background-color: rgb(197, 197, 197);
+    margin: 20px 0;
 }
 
 .centered{
@@ -110,6 +156,7 @@ button:hover, a:hover, input[type="submit"]:hover{
 }
 
 .overlay-container{
+    padding: 10px;
     position: relative;
 }
 
@@ -126,17 +173,56 @@ button:hover, a:hover, input[type="submit"]:hover{
     opacity: 1;
 }
 
+#overlay-link{
+    border-radius: 10px 10px 0 0;
+    visibility: hidden;
+}
+
+.overlay-container:hover #overlay-link{
+    visibility: visible;
+    background-color: rgba(255, 128, 149, 0.501);
+}
+
+.togglediv{
+    display: none;
+}
+
+#showdetails{
+    border-top: 2px solid rgb(54, 54, 54);
+}
+
 
 
 @media screen and (min-width: 1250px){
     .projects{
         grid-template-columns: repeat(4, 1fr)
     }
+
 }
 
-@media screen and (max-width: 1249px) and (min-width: 600px){
+@media screen and (max-width: 1249px) and (min-width: 750px){
     .projects{
         grid-template-columns: repeat(2, 300px);
         justify-content: center;
+    }
+}
+
+@media screen and (min-width: 749px){
+    h1{
+        font-size: 3.5em;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+
+    #totop{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 749px){
+    #totop{
+        display: block;
     }
 }

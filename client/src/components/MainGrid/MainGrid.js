@@ -16,7 +16,7 @@ const MainGrid = () => {
       <ToggleDiv />
       <div>
       <div>
-      <div><h1 id="toppoint">Projects</h1></div>
+      <div><h2 id="toppoint">Projects</h2></div>
       <div><pre>{title && `Name: ${title} |`} {languages && `Contains languages: ${languages.replace(/&/g, ", ")}`}</pre></div>
       <Pagination />
       <AllProjects />

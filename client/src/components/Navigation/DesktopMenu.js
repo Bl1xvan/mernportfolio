@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function DesktopMenu() {
   return (
-    <div className="bothends">
+    <div className="bothends" id="navcolor">
     <span>Portfolio</span>
-    <span className="D-navbargrid">
+    <span className="desktopnav">
         <a href="#welcomediv">
           Welcome
         </a>

@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import SocialMedia from './SocialMedia'
 import { FiMenu } from "react-icons/fi";
 
 export default function MobileMenu(){
@@ -12,7 +11,6 @@ export default function MobileMenu(){
   return (
     <div className="M-navbar">
     <div className="menu">
-      <span className="mobile-icons"><SocialMedia /></span>
       <button type="button" className="togglebtn" onClick={toggleDisplay}>
         <FiMenu />
       </button>

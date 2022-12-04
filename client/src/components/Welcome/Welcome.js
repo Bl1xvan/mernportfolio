@@ -7,8 +7,8 @@ const Welcome = () => {
       <h1>
           WELCOME
       </h1>
-      <div>
-        <h4>Front-End Developer</h4>
+      <div className="label-flex">
+        <span>Front-End Developer</span>
         <a href="#projectsdiv">Go to projects</a>
       </div>
     </div>

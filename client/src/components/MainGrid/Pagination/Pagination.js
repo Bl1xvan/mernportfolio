@@ -23,13 +23,13 @@ import useToggle from "../../../hooks/useToggle"
   return (
     <div className="bothends">
     <button type="button" className="showside" onClick={showToggle}>Show Filters</button>
-    <div className="pglabel">
-    <h3>Page Number</h3>
-    <select className="pgnum" value={page} onChange={pageJump}>
-      {pages.map((pg, index) => {
-        return <option key={index}>{pg}</option>
-      })}
-    </select>
+    <div className="flex-row">
+      <h3>Page Number</h3>
+      <select title="pgnum" value={page} onChange={pageJump}>
+        {pages.map((pg, index) => {
+          return <option key={index}>{pg}</option>
+        })}
+      </select>
     </div>
 
     </div>
