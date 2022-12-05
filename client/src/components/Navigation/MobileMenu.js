@@ -3,7 +3,7 @@ import { FiMenu } from "react-icons/fi";
 
 export default function MobileMenu(){
   const [toggle, setToggle] = useState(false);
-  const styles = {position: "absolute", top: toggle ? 0 : -500, width: "100%" }
+  const styles = {position: "absolute", left: 0, top: toggle ? 0 : -500, width: "100%" }
 
   const toggleDisplay = () =>{
     setToggle(!toggle)

@@ -41,8 +41,13 @@ input[type="checkbox"]{
     z-index: 4;
 }
 
-.overlay-all{
+.togglebtn{
     z-index: 5;
+    position: absolute;
+}
+
+.overlay-all{
+    z-index: 6;
     background-color: rgba(81, 81, 81, 0.709);
 }
 
@@ -72,7 +77,7 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
 }
 
 img[class="full-container"]{
-    max-width: 450px;
+    max-width: 375px;
 }
 
 .desktopnav{
@@ -81,6 +86,18 @@ img[class="full-container"]{
     gap: .2em;
     background-color: white;
 }
+
+.mobilenav{
+    width: 100%;
+    transition: top .5s;
+    background-color: white;
+}
+
+.mobilenav a{
+    max-width: 500px;
+    margin: 0 auto 1px;
+}
+
 
 .desktopnav a, .mobilenav a {
     background-color:rgb(86, 41, 128);
@@ -99,6 +116,7 @@ img[class="full-container"]{
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
 }
 
 .portfolio-section{
@@ -175,9 +193,9 @@ img[class="full-container"]{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color:rgb(101, 101, 101);
-    width: 70%;
+    width: 85%;
     padding: 25px;
-    max-width: 1000px;
+    max-width: 1100px;
 }
 .rounded.centered.squared{
     background-color: gray;
@@ -206,6 +224,7 @@ img[class="full-container"]{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    
 }
 
 .overlay-container{
@@ -226,12 +245,13 @@ img[class="full-container"]{
 
 #overlay-link{
     border-radius: 10px 10px 0 0;
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s;
 }
 
 .overlay-container:hover > #overlay-link{
-    visibility: visible;
-    background-color: rgba(255, 128, 149, 0.501);
+    opacity: 1;
+    background-color: rgba(48, 48, 48, 0.658);
 }
 
 .togglediv{
@@ -265,14 +285,14 @@ img[class="full-container"]{
 
 }
 
-@media screen and (max-width: 1249px) and (min-width: 775px){
+@media screen and (max-width: 1249px) and (min-width: 900px){
     .projects{
         grid-template-columns: repeat(2, 300px);
         justify-content: center;
     }
 }
 
-@media screen and (min-width: 774px){
+@media screen and (min-width: 900px){
     h1{
         font-size: 3.5em;
     }
@@ -294,7 +314,7 @@ img[class="full-container"]{
     }
 }
 
-@media screen and (max-width: 774px){
+@media screen and (max-width: 899px){
     .togglediv{
         width: 225px;
     }
