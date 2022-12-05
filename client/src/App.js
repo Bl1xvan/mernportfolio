@@ -8,7 +8,7 @@ import About from './components/About/About'
 function App() {
  
   return (
-    <div id="maindiv">
+    <div id="full-container">
       <Navigation />
       <Welcome />
       <About />

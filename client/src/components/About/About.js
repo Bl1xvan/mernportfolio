@@ -15,11 +15,11 @@ export default function About(){
       <div id="languages">
         <h2>Languages</h2>
         <div className="grid-group rounded small-grid">
-          <div className="rounded centered"><SiHtml5 />HTML</div>
-          <div className="rounded centered"><SiCss3 />CSS</div>
-          <div className="rounded centered"><SiJavascript />JS</div>
-          <div className="rounded centered"><SiReact />React</div>
-          <div className="rounded centered"><SiNodedotjs />Node</div>
+          <div className="rounded centered squared"><SiHtml5 />HTML</div>
+          <div className="rounded centered squared"><SiCss3 />CSS</div>
+          <div className="rounded centered squared"><SiJavascript />JS</div>
+          <div className="rounded centered squared"><SiReact />React</div>
+          <div className="rounded centered squared"><SiNodedotjs />Node</div>
         </div>
       </div>
     </div>

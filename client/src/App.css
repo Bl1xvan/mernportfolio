@@ -19,6 +19,7 @@ a{
     color: black;
 }
 
+
 select{
     padding: 10px;
     border: none;
@@ -38,6 +39,11 @@ input[type="checkbox"]{
 
 .topmost{
     z-index: 4;
+}
+
+.overlay-all{
+    z-index: 5;
+    background-color: rgba(81, 81, 81, 0.709);
 }
 
 button:not(.showdetails){
@@ -60,6 +66,14 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     border-top: 2px solid rgb(54, 54, 54);
 }
 
+.full-container{
+    height: 100%;
+    width: 100%;
+}
+
+img[class="full-container"]{
+    max-width: 450px;
+}
 
 .desktopnav{
     display: grid;
@@ -85,9 +99,7 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
 }
-
 
 .portfolio-section{
     max-width: 1450px;
@@ -128,8 +140,8 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     flex-direction: column;
 }
 
-.label-flex{
-    gap: .75em;
+.align-row{
+    grid-template-rows: auto auto 1fr auto;
 }
 
 .flex-row{
@@ -137,7 +149,7 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    gap: 1em;
+    gap: .5em;
 }
 
 .rounded:not(.auto-height){
@@ -146,15 +158,28 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     background-color: rgb(197, 197, 197);
 }
 
+.squared{
+    aspect-ratio: 1;
+}
+
 .centered{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    aspect-ratio: 1;
+    justify-content: center;   
 }
 
-.rounded.centered{
+.position-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:rgb(101, 101, 101);
+    width: 70%;
+    padding: 25px;
+    max-width: 1000px;
+}
+.rounded.centered.squared{
     background-color: gray;
 }
 
@@ -168,7 +193,6 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     display: grid;
     grid-template-rows: 1fr auto;
     align-content: center;
-    aspect-ratio: 1;
 }
 
 .auto-height > *{
@@ -193,8 +217,6 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
    position:absolute;
    top: 0;
    left: 0;
-   width: 100%;
-   height: 100%; 
 }
 
 .overlay * {
@@ -207,16 +229,32 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     visibility: hidden;
 }
 
-.overlay-container:hover #overlay-link{
+.overlay-container:hover > #overlay-link{
     visibility: visible;
     background-color: rgba(255, 128, 149, 0.501);
 }
 
 .togglediv{
     position: absolute;
-    background-color: rgb(46, 46, 46);
+    background-color: rgb(188, 188, 188);
+    left: -1000px;
     z-index: 3;
     padding: 15px;
+    transition: left .5s;
+}
+
+.togglediv *{
+    font-size: .95em;
+    margin: 5px 0;
+}
+
+#show-filter{
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+#allprojects{
+    position: relative;
 }
 
 
@@ -250,13 +288,21 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     .large-grid{
         grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     }
+
+    .togglediv{
+        width: 350px;
+    }
 }
 
 @media screen and (max-width: 774px){
+    .togglediv{
+        width: 225px;
+    }
+
     #totop{
-        position: relative;
-        bottom: 55px;
+        position: absolute;
         left: 10px;
+        bottom: 0;
         background-color: aqua;
         text-align: center;
         border-radius: 50%;
@@ -272,6 +318,16 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     .grid-group.large-grid, #send-email *{
         display: flex;
         flex-direction: column;
+    }
+
+    .grid-group.medium-grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .description{
+        max-height: 250px;
+        overflow-y: scroll;
     }
 
 }

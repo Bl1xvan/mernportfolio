@@ -1,17 +1,18 @@
-import {useState} from 'react'
+
 
 export default function useToggle() {
-    const [toggle, setToggle] = useState(`${-1000}px`)
     const showToggle = () => {
+        const showFilter = document.getElementById("show-filter")
         const toggleDiv = document.querySelector('.togglediv')
-        setToggle(0)
-        toggleDiv.style.left = toggle
+        toggleDiv.style.left = 0
+        showFilter.style.opacity = 0
     }
 
     const hideToggle = () => {
+        const showFilter = document.getElementById("show-filter")
         const toggleDiv = document.querySelector('.togglediv')
-        setToggle(`${-1000}px`)
-        toggleDiv.style.left = toggle
+        toggleDiv.style.left = `${-1000}px`
+        showFilter.style.opacity = 1
     }
 
     return {showToggle, hideToggle}

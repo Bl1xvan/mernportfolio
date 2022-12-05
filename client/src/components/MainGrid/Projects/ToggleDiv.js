@@ -9,15 +9,13 @@ export default function ToggleDiv() {
   
 
   return (
-    <div className="togglediv">
-      <div className="filter-controls">
-        <SearchBar />
-        <Tags />
-      <button type="button" className="clearsearch">Clear Search</button>
-    </div>
-    <button type="button" onClick={hideToggle}>
+    <div className="togglediv label-flex rounded">
+      <SearchBar />
+      <Tags />
+      <button type="button">Clear Search</button>
+      <button type="button" onClick={hideToggle}>
         Hide Filters
-    </button>
+      </button>
     </div>
   )
 }

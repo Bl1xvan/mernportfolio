@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { actions } from "../../../store/index";
 import { useDispatch } from "react-redux";
 import useToggle from "../../../hooks/useToggle"
-
+import ToggleDiv from "../Projects/ToggleDiv"
  export default function Pagination() {
   const page = useSelector((state) => state.page);
   const dispatch = useDispatch()
@@ -22,7 +22,8 @@ import useToggle from "../../../hooks/useToggle"
 
   return (
     <div className="bothends">
-    <button type="button" onClick={showToggle}>Show Filters</button>
+    <ToggleDiv />
+    <button type="button" id="show-filter" onClick={showToggle}>Show Filters</button>
     <div className="flex-row">
       <h3>Page Number</h3>
       <select title="pgnum" className="rounded" value={page} onChange={pageJump}>
