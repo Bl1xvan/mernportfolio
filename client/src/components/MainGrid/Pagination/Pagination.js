@@ -22,8 +22,8 @@ import ToggleDiv from "../Projects/ToggleDiv"
 
   return (
     <div className="bothends">
-    <ToggleDiv />
     <button type="button" id="show-filter" onClick={showToggle}>Show Filters</button>
+    <ToggleDiv />
     <div className="flex-row">
       <h3>Page Number</h3>
       <select title="pgnum" className="rounded" value={page} onChange={pageJump}>
