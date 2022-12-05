@@ -9,7 +9,7 @@ const langTabs = useSelector((state) => state.langTabs);
   return (
     <div className="tagdiv">
         <h3 className="tagheader">Tags</h3>
-        <div className="tag-list">
+        <div className="tag-list flex-row">
             {langTabs.map((item, index) => {
               return(
                 <Tag item={item} index={index} key={v4()}/>

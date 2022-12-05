@@ -7,16 +7,17 @@ import useToggle from '../../../hooks/useToggle'
 export default function ToggleDiv() {
   const {hideToggle} = useToggle()
   
+
   return (
     <div className="togglediv">
-    <div className="filter-controls">
-      <SearchBar />
-      <Tags />
-        <button type="button" className="clearsearch">Clear Search</button>
+      <div className="filter-controls">
+        <SearchBar />
+        <Tags />
+      <button type="button" className="clearsearch">Clear Search</button>
     </div>
-    <div className="toggle-controls" onClick={hideToggle}>
-        <h3>Hide Filters</h3>
-    </div>
+    <button type="button" onClick={hideToggle}>
+        Hide Filters
+    </button>
     </div>
   )
 }

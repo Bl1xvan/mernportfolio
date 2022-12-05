@@ -22,10 +22,10 @@ import useToggle from "../../../hooks/useToggle"
 
   return (
     <div className="bothends">
-    <button type="button" className="showside" onClick={showToggle}>Show Filters</button>
+    <button type="button" onClick={showToggle}>Show Filters</button>
     <div className="flex-row">
       <h3>Page Number</h3>
-      <select title="pgnum" value={page} onChange={pageJump}>
+      <select title="pgnum" className="rounded" value={page} onChange={pageJump}>
         {pages.map((pg, index) => {
           return <option key={index}>{pg}</option>
         })}

@@ -9,7 +9,7 @@ const {title, depl} = project
       <h4>{title}</h4>
       <span className="overlay centered" id="overlay-link"><h4>Go To Site</h4></span>
     </a>
-    <button type="button" id="showdetails" onClick={displayBlock}>Details</button>
+    <button type="button" className="showdetails" onClick={displayBlock}>Details</button>
   </div>
   )
 }

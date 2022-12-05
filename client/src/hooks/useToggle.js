@@ -1,17 +1,17 @@
 import {useState} from 'react'
 
 export default function useToggle() {
-    const [toggle, setToggle] = useState('yellow')
+    const [toggle, setToggle] = useState(`${-1000}px`)
     const showToggle = () => {
         const toggleDiv = document.querySelector('.togglediv')
-        setToggle('pink')
-        toggleDiv.style.backgroundColor = toggle
+        setToggle(0)
+        toggleDiv.style.left = toggle
     }
 
     const hideToggle = () => {
         const toggleDiv = document.querySelector('.togglediv')
-        setToggle('yellow')
-        toggleDiv.style.backgroundColor = toggle
+        setToggle(`${-1000}px`)
+        toggleDiv.style.left = toggle
     }
 
     return {showToggle, hideToggle}

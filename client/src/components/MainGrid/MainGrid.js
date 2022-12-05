@@ -13,9 +13,9 @@ const MainGrid = () => {
   const languages = useSelector((state) => state.languages);
   return (
     <div id="projectsdiv" className="portfolio-section">
+      <div>
+      <div>
       <ToggleDiv />
-      <div>
-      <div>
       <div><h2 id="toppoint">Projects</h2></div>
       <div><pre>{title && `Name: ${title} |`} {languages && `Contains languages: ${languages.replace(/&/g, ", ")}`}</pre></div>
       <Pagination />

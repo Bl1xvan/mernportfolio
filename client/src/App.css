@@ -3,16 +3,10 @@
     font-size: 1.125rem;
     font-family:Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 0;
 }
 
 h1, h2, h3{
     margin: 25px 0;
-}
-
-select{
-    height: 30px;
-    margin: auto 0;
 }
 
 p{
@@ -25,8 +19,9 @@ a{
     color: black;
 }
 
-.button:not(.showdetails){
-    border-radius: 10px;
+select{
+    padding: 10px;
+    border: none;
 }
 
 input, button, textarea{
@@ -37,13 +32,34 @@ input, button, textarea{
     margin: 15px 0;
 }
 
+input[type="checkbox"]{
+    margin-right: 10px;
+}
+
+.topmost{
+    z-index: 4;
+}
+
+button:not(.showdetails){
+    border-radius: 10px;
+}
+
+button[class="centered"]{
+    padding: 20px;
+}
+
 textarea{
     min-height: 150px;
 }
 
-button:hover, a:not(.overlay-container):hover, input[type="submit"]:hover{
-    filter: brightness(70%);
+button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hover{
+    filter: brightness(60%);
 }
+
+.showdetails{
+    border-top: 2px solid rgb(54, 54, 54);
+}
+
 
 .desktopnav{
     display: grid;
@@ -100,7 +116,7 @@ button:hover, a:not(.overlay-container):hover, input[type="submit"]:hover{
 }
 
 .small-grid{
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(50px, 90px));
 }
 
 .medium-grid{
@@ -112,10 +128,15 @@ button:hover, a:not(.overlay-container):hover, input[type="submit"]:hover{
     flex-direction: column;
 }
 
+.label-flex{
+    gap: .75em;
+}
+
 .flex-row{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     gap: 1em;
 }
 
@@ -130,12 +151,15 @@ button:hover, a:not(.overlay-container):hover, input[type="submit"]:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
     aspect-ratio: 1;
 }
 
 .rounded.centered{
     background-color: gray;
+}
+
+.rounded.flex-row{
+    padding: 40px 15px;
 }
 
 .auto-height{
@@ -189,13 +213,11 @@ button:hover, a:not(.overlay-container):hover, input[type="submit"]:hover{
 }
 
 .togglediv{
-    display: none;
+    position: absolute;
+    background-color: rgb(46, 46, 46);
+    z-index: 3;
+    padding: 15px;
 }
-
-#showdetails{
-    border-top: 2px solid rgb(54, 54, 54);
-}
-
 
 
 @media screen and (min-width: 1250px){
@@ -232,7 +254,14 @@ button:hover, a:not(.overlay-container):hover, input[type="submit"]:hover{
 
 @media screen and (max-width: 774px){
     #totop{
-        display: block;
+        position: relative;
+        bottom: 55px;
+        left: 10px;
+        background-color: aqua;
+        text-align: center;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        padding: 25px;
     }
 
     .projects{
