@@ -2,19 +2,19 @@ import React from 'react'
 
 export default function DesktopMenu() {
   return (
-    <div className="fixed topmost bothends" id="navcolor">
+    <div className="fixed topmost bothends navcolor">
     <span>Portfolio</span>
     <span className="desktopnav">
-        <a href="#welcomediv">
+        <a href="#welcomediv" className="navcolor">
           Welcome
         </a>
-        <a href="#aboutdiv">
+        <a href="#aboutdiv" className="navcolor">
           Services
         </a>
-        <a href="#projectsdiv">
+        <a href="#projectsdiv" className="navcolor">
           Projects
         </a>
-        <a href="#contactdiv">
+        <a href="#contactdiv" className="navcolor">
           Contact
         </a>
     </span>

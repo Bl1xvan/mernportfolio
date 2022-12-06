@@ -7,7 +7,7 @@ export default function SearchBar({searchRef}){
   return (
       <>
         <h2>Search</h2>
-        <input type="text" ref={searchRef} onChange={(e) => dispatch(actions.handleTitle(e.target.value))} />
+        <input type="text" ref={searchRef} onChange={() => dispatch(actions.handleTitle(searchRef.current.value))} />
       </>
   )
 }

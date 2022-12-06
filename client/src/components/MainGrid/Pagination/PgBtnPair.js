@@ -13,7 +13,7 @@ export default function PgBtnPair() {
     <div className="bothends">
     <button 
       type="button"
-      className="centered"
+      className="centered gray-box"
       onClick={() =>
         dispatch(actions.handlePage({ limit: 1, difference: -1 }))
       }
@@ -22,7 +22,7 @@ export default function PgBtnPair() {
 
     <button 
       type="button"
-      className="centered" 
+      className="centered gray-box" 
       onClick={() =>
         dispatch(actions.handlePage({ limit:{pageCount}, difference: 1 }))
       }

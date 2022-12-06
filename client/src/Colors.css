@@ -1,0 +1,19 @@
+:root{
+    --lightgray : rgb(181, 181, 181);
+    --darkgray: rgb(104, 104, 104);
+    --purple: rgb(91, 41, 120); 
+}
+
+.navcolor, .mediacolor{
+    background-color: var(--purple);
+    color: white;
+}
+
+.gray-section{
+    background-color: var(--lightgray);
+}
+
+.gray-box{
+    background-color: var(--darkgray);
+    color: black;
+}

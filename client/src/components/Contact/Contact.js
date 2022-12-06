@@ -28,32 +28,32 @@ export default function Contact(){
             <div className="grid-group tiny-grid"><SocialMedia /></div>
           </div>
         </div>
-        <form id="send-email" className="rounded" onSubmit={sendEmail}>
+        <form id="send-email" className="rounded gray-section" onSubmit={sendEmail}>
           <span className="grid-group medium-grid">
             <label className="label-flex">
               <span>First Name</span>
-              <input type="text" id="fname" name="fname" required />
+              <input type="text" className="gray-box rounded" name="fname" required />
             </label>
             <label className="label-flex">
               <span>Last Name</span>
-              <input type="text" id="lname" name="lname" required />
+              <input type="text" className="gray-box rounded" name="lname" required />
             </label>
           </span>
           <span className="grid-group medium-grid">
             <label className="label-flex">
               <span>Email</span>
-              <input type="email" id="email" name="email" required/>
+              <input type="email" className="gray-box rounded" name="email" required/>
             </label>
             <label className="label-flex"> 
               <span>Subject</span>
-              <input type="text" id="subject" name="subject" required />
+              <input type="text" className="gray-box rounded" name="subject" required />
             </label>
           </span>
           <span className="label-flex">
             <label><span>Message</span></label>
-            <textarea id="message" name="message" className="span2" placeholder="Send a message" required></textarea>
+            <textarea id="message" name="message" className="gray-box rounded" placeholder="Send a message" required></textarea>
           </span>
-          <label><input type="submit" id="submit" /> </label>
+          <label><input type="submit" className="rounded gray-box" id="submit" /> </label>
         </form>
       </div>
     </div>

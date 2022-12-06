@@ -28,7 +28,6 @@ select{
 input, button, textarea{
     border: none;
     padding: 15px;
-    background-color: gray;
     border-radius: 5px;
     margin: 15px 0;
 }
@@ -48,7 +47,6 @@ input[type="checkbox"]{
 
 .overlay-all{
     z-index: 6;
-    background-color: rgba(81, 81, 81, 0.709);
 }
 
 button:not(.showdetails){
@@ -62,8 +60,6 @@ button[class="centered"]{
 textarea{
     min-height: 150px;
 }
-
-
 
 button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hover{
     filter: brightness(60%);
@@ -82,13 +78,11 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     display: grid;
     grid-template-columns: repeat(4, minmax(150px, 1fr));
     gap: .2em;
-    background-color: white;
 }
 
 .mobilenav{
     width: 100%;
     transition: top .5s;
-    background-color: white;
 }
 
 .mobilenav a{
@@ -98,16 +92,9 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
 
 
 .desktopnav a, .mobilenav a {
-    background-color:rgb(86, 41, 128);
-    color: white;
     padding: 10px 0;
     text-align: center;
     display: block;
-}
-
-#navcolor{
-    background-color: rgb(86, 41, 128);
-    color: white;
 }
 
 .fixed{
@@ -170,12 +157,15 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
 
 .rounded:not(.auto-height){
     border-radius: 10px;
-    padding: 15px;
-    background-color: rgb(197, 197, 197);
+    padding: 15px
 }
 
 .squared{
     aspect-ratio: 1;
+}
+
+.circled{
+    border-radius: 50%;
 }
 
 .centered{
@@ -190,13 +180,9 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color:rgb(101, 101, 101);
     width: 85%;
     padding: 25px;
     max-width: 1100px;
-}
-.rounded.centered.squared{
-    background-color: gray;
 }
 
 .rounded.flex-row{
@@ -204,7 +190,6 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
 }
 
 .auto-height{
-    background-color: gray;
     border-radius: 10px;
     display: grid;
     grid-template-rows: 1fr auto;
@@ -226,7 +211,6 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
 }
 
 .overlay-container{
-    padding: 10px;
     position: relative;
 }
 
@@ -249,7 +233,6 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
 
 .overlay-container:hover > #overlay-link{
     opacity: 1;
-    background-color: rgba(48, 48, 48, 0.658);
 }
 
 .togglediv{
@@ -268,20 +251,6 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
 #show-filter{
     opacity: 1;
     transition: opacity .5s;
-}
-
-#allprojects{
-    position: relative;
-}
-
-.colored.rounded{
-    background-color: rgb(94, 76, 110);
-    color: white;
-}
-
-
-img[class="full-container squared"]{
-    max-width: 405px;
 }
 
 @media screen and (min-width: 1250px){
@@ -338,10 +307,7 @@ img[class="full-container squared"]{
         position: absolute;
         left: 10px;
         bottom: 0;
-        background-color: aqua;
         text-align: center;
-        border-radius: 50%;
-        aspect-ratio: 1;
         padding: 25px;
     }
 
