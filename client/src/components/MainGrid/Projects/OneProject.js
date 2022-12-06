@@ -1,31 +1,35 @@
 import React, {useState} from 'react'
-import Thumbnail from "./Thumbnail"
 import Overlay from "./Overlay"
 import {v4} from 'uuid'
 
 export default function OneProject({project}) {
-  
-  const [displayStatus, setDisplayStatus] = useState("none");
+  const {title, deployment} = project
+  const [displayStatus, setDisplayStatus] = useState(false);
   
 
   const displayBlock = () => {
-    setDisplayStatus("block")
-    console.log(displayStatus)
+    setDisplayStatus(true)
+  
   }
 
   const displayNone = () => {
-    setDisplayStatus("none")
-    console.log(displayStatus)
+    setDisplayStatus(false)
+
   }
 
-  const displayChange = {
-    display: displayStatus
-  }
 
   return (
     <>
-    <Thumbnail key={v4()} project={project} displayBlock={displayBlock}/>
-    <Overlay key={v4()} project={project} displayNone={displayNone} displayChange={displayChange}/>
+      <div className="rounded auto-height squared">
+      <a href={deployment} className="overlay-container">
+        <h4>{title}</h4>
+        <span className="overlay centered full-container" id="overlay-link">
+          <h4 className="rounded">Go To Site</h4>
+        </span>
+      </a>
+      <button type="button" className="showdetails" onClick={displayBlock}>Details</button>
+    </div>
+    {displayStatus && <Overlay key={v4()} project={project} displayNone={displayNone}/>}
     </>
   )
 }

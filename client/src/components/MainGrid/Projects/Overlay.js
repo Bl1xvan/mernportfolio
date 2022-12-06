@@ -1,14 +1,14 @@
 import React from 'react'
 import Languages from '../LangTabs/Languages'
 
-export default function Overlay({project, displayChange, displayNone}) {
+export default function Overlay({project, displayNone}) {
     const {image, title, repository, deployment, description, languages} = project
     return (
-        <div style={displayChange} className="fixed full-container overlay-all">
+        <div className="fixed full-container overlay-all">
           <div className="position-center rounded">
                 <button type="button" onClick={displayNone}>X</button>
                 <div className="grid-group medium-grid scroll">
-                  <div className="centered"><img src={image} alt={title} className="full-container" /></div>
+                  <div className="centered"><img src={image} alt={title} className="full-container squared" /></div>
                   <div className="grid-group align-row">
                       <h2>{title}</h2>
                       <Languages languages={languages} />

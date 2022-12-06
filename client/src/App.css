@@ -63,6 +63,8 @@ textarea{
     min-height: 150px;
 }
 
+
+
 button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hover{
     filter: brightness(60%);
 }
@@ -74,10 +76,6 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
 .full-container{
     height: 100%;
     width: 100%;
-}
-
-img[class="full-container"]{
-    max-width: 405px;
 }
 
 .desktopnav{
@@ -281,12 +279,10 @@ img[class="full-container"]{
     color: white;
 }
 
-.position-center.rounded{
-    padding: 35px;
-    max-height: 900px;
+
+img[class="full-container squared"]{
+    max-width: 405px;
 }
-
-
 
 @media screen and (min-width: 1250px){
     .projects{
@@ -322,9 +318,18 @@ img[class="full-container"]{
     .togglediv{
         width: 350px;
     }
+
 }
 
 @media screen and (max-width: 899px){
+    h1{
+        font-size: 3em;
+    }
+
+    h2{
+        font-size: 1.5em;
+    }
+
     .togglediv{
         width: 225px;
     }
@@ -356,6 +361,11 @@ img[class="full-container"]{
         max-height: 700px;
         overflow-y: scroll;
     }
+
+    .position-center.rounded{
+    padding: 35px;
+    max-height: 900px;
+}
 
 
 }

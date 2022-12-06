@@ -33,6 +33,12 @@ const apiSlice = createSlice({
     },
     handlePageJump(state, action){
       state.page = Number(action.payload)
+    },
+    handleReset(state,action){
+      state.title = ""
+      state.languages = ""
+      state.langTabs = tabs
+      state.page = Number(1)
     }
   }
 });
