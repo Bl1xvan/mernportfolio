@@ -22,7 +22,7 @@ import ToggleDiv from "../Projects/ToggleDiv"
 
   return (
     <div className="bothends">
-    <button type="button" className="rounded gray-box" onClick={showToggle}>Show Filters</button>
+    <button type="button" id="show-filter" className="rounded gray-box" onClick={showToggle}>Show Filters</button>
     <ToggleDiv />
     <div className="flex-row">
       <h3>Page Number</h3>

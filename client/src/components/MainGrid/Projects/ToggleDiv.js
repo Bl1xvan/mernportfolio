@@ -18,11 +18,11 @@ export default function ToggleDiv() {
   }
 
   return (
-    <div className="togglediv label-flex rounded">
+    <div className="togglediv label-flex rounded gray-section">
       <SearchBar searchRef={searchRef}/>
       <Tags />
-      <button type="button" onClick={clearFilter}>Clear Search</button>
-      <button type="button" onClick={hideToggle}>
+      <button type="button" className="purplediv" onClick={clearFilter}>Clear Search</button>
+      <button type="button" className="gray-box" onClick={hideToggle}>
         Hide Filters
       </button>
     </div>

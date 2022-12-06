@@ -22,19 +22,23 @@ export default function OneProject({project, index}) {
     transition: `opacity ${index}s`
   }
 
+  const outerstyle="rounded auto-height squared gray-box"
+  const overlaystyle = "overlay centered full-container transdarkgray"
+  const h4style = "rounded gray-section"
+  const buttonstyle = "showdetails gray-box"
 
   return (
     <>
-      <div className="rounded auto-height squared gray-box" style={animation}>
-      <a href={deployment} className="overlay-container">
-        <h4 style={{padding: "15px"}}>{title}</h4>
-        <span className="overlay centered full-container" id="overlay-link">
-          <h4 className="rounded">Go To Site</h4>
-        </span>
-      </a>
-      <button type="button" className="showdetails gray-box" onClick={displayBlock}>Details</button>
-    </div>
-    {displayStatus && <Overlay key={v4()} project={project} displayNone={displayNone}/>}
+      <div className={outerstyle} style={animation}>
+        <a href={deployment} className="overlay-container">
+            <h4 style={{padding: "15px"}}>{title}</h4>
+              <span className={overlaystyle} id="overlay-link">
+            <h4 className={h4style}>Go To Site</h4>
+          </span>
+        </a>
+        <button type="button" className={buttonstyle} onClick={displayBlock}>Details</button>
+      </div>
+      {displayStatus && <Overlay key={v4()} project={project} displayNone={displayNone}/>}
     </>
   )
 }

@@ -53,7 +53,7 @@ export default function Contact(){
             <label><span>Message</span></label>
             <textarea id="message" name="message" className="gray-box rounded" placeholder="Send a message" required></textarea>
           </span>
-          <label><input type="submit" className="rounded gray-box" id="submit" /> </label>
+          <label><input type="submit" className="rounded purplediv" id="submit" /> </label>
         </form>
       </div>
     </div>
