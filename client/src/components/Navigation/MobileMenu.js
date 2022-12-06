@@ -10,20 +10,20 @@ export default function MobileMenu(){
   }
   return (
     <div className="topmost fixed">
-      <button type="button" className="togglebtn" onClick={toggleDisplay}>
+      <button type="button" className="togglebtn gray-box rounded" onClick={toggleDisplay}>
         <FiMenu />
       </button>
     <span className="mobilenav" style={styles}>
-        <a href="#welcomediv" className="navcolor">
+        <a href="#welcomediv" className="purplediv">
           Welcome
         </a>
-        <a href="#aboutdiv" className="navcolor">
+        <a href="#aboutdiv" className="purplediv">
           Services
         </a>
-        <a href="#projectsdiv" className="navcolor">
+        <a href="#projectsdiv" className="purplediv">
           Projects
         </a>
-        <a href="#contactdiv" className="navcolor">
+        <a href="#contactdiv" className="purplediv">
           Contact
         </a>
     </span>

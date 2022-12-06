@@ -4,7 +4,7 @@ import { SiHtml5, SiCss3, SiJavascript, SiNodedotjs, SiReact } from "react-icons
 
 export default function About(){
   return (
-    <div className="portfolio-section" id="aboutdiv">
+    <div className="portfolio-section centered" id="aboutdiv">
       <div id="services">
         <h2>Services</h2>
         <div className="rounded flex-row gray-section">

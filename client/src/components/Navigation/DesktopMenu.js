@@ -3,7 +3,7 @@ import React from 'react'
 export default function DesktopMenu() {
   return (
     <div className="fixed topmost bothends purplediv">
-    <span>Portfolio</span>
+    <span style={{marginLeft: "10px"}}>Portfolio</span>
     <span className="desktopnav">
         <a href="#welcomediv" className="purplediv">
           Welcome

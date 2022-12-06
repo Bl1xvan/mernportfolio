@@ -18,7 +18,7 @@ export default function Contact(){
     }).catch(()=>alert("Error! Please try again"))
   }
   return (
-    <div id="contactdiv" className="portfolio-section">
+    <div id="contactdiv" className="portfolio-section centered">
       <h2 id="contact-header">Send a Message!</h2>
       <div className="grid-group large-grid">
         <div id="calltoaction">

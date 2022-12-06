@@ -108,10 +108,6 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     max-width: 1450px;
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1em;
     margin: 0 auto;
 }
@@ -141,6 +137,7 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
 .label-flex, .mobilenav *{
     display: flex;
     flex-direction: column;
+    gap: .8em;
 }
 
 .align-row{

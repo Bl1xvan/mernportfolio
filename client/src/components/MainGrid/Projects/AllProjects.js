@@ -20,7 +20,7 @@ export default function AllProjects() {
                   )
       })
       )}
-      <a id="totop" className="sqaured circled" href="#toppoint"><IoMdArrowDropup /></a>
+      <a id="totop" className="squared circled purplediv" href="#toppoint"><IoMdArrowDropup /></a>
     </div>
     
     </>
