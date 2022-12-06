@@ -7,7 +7,7 @@ const Empty = ({message}) => {
 
   return (
     <>
-      <div className="full-container centered overlay translightgray">
+      <div className="full-container centered overlay translightgray rounded">
         <h2 className="rounded gray-box">{message}</h2>
       </div>
       <div className="rounded centered squared gray-box"></div>

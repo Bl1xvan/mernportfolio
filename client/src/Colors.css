@@ -6,6 +6,10 @@
     --purple: rgb(91, 41, 120); 
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .purplediv{
     background-color: var(--purple);
     color: white;
