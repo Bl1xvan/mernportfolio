@@ -310,7 +310,6 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
 
     .projects{
         justify-content: center;
-        grid-template-columns: repeat(1, minmax(100px, 300px));
     }
 
     .grid-group.large-grid, #send-email *{
