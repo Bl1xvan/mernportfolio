@@ -23,10 +23,8 @@ export default function Contact(){
       <div className="grid-group large-grid">
         <div id="calltoaction">
           <p>My main offer is for freelance projects, but please let me know if you have other type of projects in mind!</p>
-          <div>
-            <h3>Social Media</h3>
-            <div className="grid-group tiny-grid"><SocialMedia /></div>
-          </div>
+          <h3>Social Media</h3>
+          <div className="grid-group tiny-grid"><SocialMedia /></div>
         </div>
         <form id="send-email" className="rounded gray-section" onSubmit={sendEmail}>
           <span className="grid-group medium-grid">

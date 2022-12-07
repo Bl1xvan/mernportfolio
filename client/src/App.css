@@ -250,6 +250,10 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     transition: opacity .5s;
 }
 
+#calltoaction{
+    padding-bottom: 20px;
+}
+
 @media screen and (min-width: 1250px){
     .projects{
         grid-template-columns: repeat(4, 1fr)
