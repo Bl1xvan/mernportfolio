@@ -4,7 +4,7 @@ import Languages from '../../LangTabs/Languages'
 export default function MobileOverlay({project, displayNone}) {
     const {image, title, repository, deployment, description, languages} = project
     return (
-      <div className="full-container overlay-all transdarkgray">
+      <div className="fixed full-container overlay-all transdarkgray">
           <div className="label-flex rounded gray-section">
                 <button type="button" onClick={displayNone}>X</button>
                 <div className="label-flex">
