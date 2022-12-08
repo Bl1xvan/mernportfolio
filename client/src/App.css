@@ -153,7 +153,7 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
 }
 
 .margin-right{
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .rounded:not(.auto-height){

@@ -5,11 +5,11 @@ export default function MobileOverlay({project, displayNone}) {
     const {image, title, repository, deployment, description, languages} = project
     return (
 
-          <div className="fixed full-container overlay-all label-flex gray-section scroll">
+          <div className="fixed full-container overlay-all label-flex gray-section">
                 <button type="button" onClick={displayNone}>X</button>
                 <div className="label-flex">
                   <img src={image} alt={title} style={{width: "200px", height: "200px"}} />
-                  <div className="label-flex">
+                  <div className="label-flex scroll">
                       <h2>{title}</h2>
                       <Languages languages={languages} />
                       <p className="description">{description}</p>

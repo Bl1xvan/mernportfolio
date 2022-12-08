@@ -25,7 +25,7 @@ import ToggleDiv from "../Projects/ToggleDiv"
     <button type="button" id="show-filter" className="rounded gray-box" onClick={showToggle}>Show Filters</button>
     <ToggleDiv />
     <div className="flex-row">
-      <h3>Page Number</h3>
+      <h3 className="margin-right">Page Number</h3>
       <select title="pgnum" className="rounded gray-box" value={page} onChange={pageJump}>
         {pages.map((pg, index) => {
           return <option key={index}>{pg}</option>
