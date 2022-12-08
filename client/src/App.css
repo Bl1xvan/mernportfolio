@@ -104,6 +104,14 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     width: 100%;
 }
 
+.absolute{
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
+
+
 .portfolio-section{
     max-width: 1450px;
     width: 100%;
