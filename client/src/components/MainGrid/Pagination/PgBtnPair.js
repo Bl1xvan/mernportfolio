@@ -20,7 +20,7 @@ export default function PgBtnPair() {
       disabled={page === 1}><IoMdArrowDropleft />
     </button>
 
-    <button 
+    <button
       type="button"
       className="centered gray-box" 
       onClick={() =>

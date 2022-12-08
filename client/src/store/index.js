@@ -9,10 +9,11 @@ const tabs = [
 const apiSlice = createSlice({
   name: "parts",
   initialState: {
+    currentPageUrl : `https://mernportfolio.onrender.com/api/v1/projects`,
     title: "",
     languages: "",
     page: 1,
-    langTabs: tabs
+    langTabs: tabs,
   },
   reducers: {
     handleTitle(state, action) {
