@@ -8,7 +8,7 @@ export default function MobileOverlay({project, displayNone}) {
           <div className="fixed full-container overlay-all label-flex gray-section scroll">
                 <button type="button" onClick={displayNone}>X</button>
                 <div className="label-flex">
-                  <img src={image} alt={title} className="squared" />
+                  <img src={image} alt={title} style={{width: "200px", height: "200px"}} />
                   <div className="label-flex">
                       <h2>{title}</h2>
                       <Languages languages={languages} />
