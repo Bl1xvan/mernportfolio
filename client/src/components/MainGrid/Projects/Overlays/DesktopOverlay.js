@@ -1,5 +1,5 @@
 import React from 'react'
-import Languages from '../LangTabs/Languages'
+import Languages from '../../LangTabs/Languages'
 
 export default function DesktopOverlay({project, displayNone}) {
     const {image, title, repository, deployment, description, languages} = project

@@ -208,7 +208,6 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    
 }
 
 .overlay-container{
