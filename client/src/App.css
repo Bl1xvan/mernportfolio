@@ -152,6 +152,10 @@ button:enabled:hover, a:not(.overlay-container):hover, input[type="submit"]:hove
     gap: .5em;
 }
 
+.margin-right{
+    margin-right: 5px;
+}
+
 .rounded:not(.auto-height){
     border-radius: 10px;
     padding: 15px

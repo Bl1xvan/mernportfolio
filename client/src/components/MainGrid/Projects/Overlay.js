@@ -1,27 +1,18 @@
 import React from 'react'
-import Languages from '../LangTabs/Languages'
+import useWindowResize from '../../../hooks/useWindowResize'
+import MobileOverlay from './Overlays/MobileOverlay'
+import DesktopOverlay from './Overlays/DesktopOverlay'
 
-export default function Overlay({project, displayNone}) {
-    const {image, title, repository, deployment, description, languages} = project
-    return (
-        <div className="fixed full-container overlay-all transdarkgray">
-          <div className="position-center rounded gray-section">
-                <button type="button" onClick={displayNone}>X</button>
-                <div className="grid-group medium-grid scroll">
-                  <div className="centered"><img src={image} alt={title} className="full-container squared" /></div>
-                  <div className="grid-group align-row">
-                      <h2>{title}</h2>
-                      <Languages languages={languages} />
-                      <p className="description">{description}</p>
-                      <div className="bothends">
-                        <a className="rounded purplediv" href={repository}>Repository</a>
-                        <a className="rounded purplediv" href={deployment}>Deployment</a>
-                      </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-      )
+
+export default function Navigation(){
+
+  const {width} = useWindowResize()
+  
+  return (
+    <>
+      {width < 450 ? <MobileOverlay /> : <DesktopOverlay /> }
+    </>
+  )
 }
 
 

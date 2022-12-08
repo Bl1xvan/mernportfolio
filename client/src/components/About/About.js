@@ -8,12 +8,12 @@ export default function About(){
       <div id="services">
         <h2>Services</h2>
         <div className="rounded flex-row gray-section">
-          <div>Portfolios</div>
-          <div>Phone Apps</div>
+          <div className="margin-right">Portfolios</div>
+          <div className="margin-right">Phone Apps</div>
         </div>
       </div>
       <div id="languages">
-        <h2>Languages</h2>
+        <h2>Skills</h2>
         <div className="grid-group rounded small-grid gray-section">
           <div className="rounded centered squared gray-box"><SiHtml5 />HTML</div>
           <div className="rounded centered squared gray-box"><SiCss3 />CSS</div>
