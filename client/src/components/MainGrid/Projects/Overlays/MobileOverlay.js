@@ -4,8 +4,8 @@ import Languages from '../../LangTabs/Languages'
 export default function MobileOverlay({project, displayNone}) {
     const {image, title, repository, deployment, description, languages} = project
     return (
-
-          <div className="full-container overlay-all label-flex gray-section">
+      <div className="full-container overlay-all transdarkgray">
+          <div className="label-flex rounded gray-section">
                 <button type="button" onClick={displayNone}>X</button>
                 <div className="label-flex">
                   <img src={image} alt={title} style={{width: "200px", height: "200px"}} />
@@ -18,7 +18,8 @@ export default function MobileOverlay({project, displayNone}) {
                         <a className="rounded purplediv" href={deployment}>Deployment</a>
                       </div>
                   </div>
-                </div>
-            </div>
+              </div>
+        </div>
+      </div>
       )
 }
