@@ -4,13 +4,13 @@ import MobileOverlay from './Overlays/MobileOverlay'
 import DesktopOverlay from './Overlays/DesktopOverlay'
 
 
-export default function Navigation(){
-
+export default function Navigation({project, displayNone}){
   const {width} = useWindowResize()
   
   return (
     <>
-      {width < 450 ? <MobileOverlay /> : <DesktopOverlay /> }
+      {width < 450 ? <MobileOverlay project={project} displayNone={displayNone} /> : 
+      <DesktopOverlay project={project} displayNone={displayNone} /> }
     </>
   )
 }
