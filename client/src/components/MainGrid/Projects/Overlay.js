@@ -9,7 +9,7 @@ export default function Navigation({project, displayNone}){
   
   return (
     <>
-      {width < 450 ? <MobileOverlay project={project} displayNone={displayNone} /> : 
+      {width < 975 ? <MobileOverlay project={project} displayNone={displayNone} /> : 
       <DesktopOverlay project={project} displayNone={displayNone} /> }
     </>
   )
