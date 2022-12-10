@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import ReactDOM from 'react-dom/client'
 import Overlay from "./Overlay"
 import {v4} from 'uuid'
 
@@ -38,7 +39,7 @@ export default function OneProject({project, index}) {
         </a>
         <button type="button" className={buttonstyle} onClick={displayBlock}>Details</button>
       </div>
-      {displayStatus && <Overlay key={v4()} project={project} displayNone={displayNone}/>}
+      {displayStatus && ReactDOM(<Overlay key={v4()} project={project} displayNone={displayNone}/>, document.getElementById('full-container'))}
     </>
   )
 }
